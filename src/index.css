@@ -41,4 +41,9 @@
 }
 body{
   @apply font-Dana
+  
 }
+body{
+  @apply bg-gray-100 dark:bg-zinc-800
+}
+
