@@ -14,7 +14,7 @@ const [productItems, setProductItems] = useState(items);
     <>
       <div className="relative group">
         {/* آیکون سبد خرید */}
-        <HiOutlineShoppingCart className="w-[32px] h-[32px] cursor-pointer" />
+        <HiOutlineShoppingCart className="w-[32px] h-[32px] cursor-pointer dark:text-white" />
 
         {/* محتوای سبد خرید */}
         <div className="absolute top-full delay-75  left-0 mt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all bg-white shadow-lg p-4 w-[400px] rounded-2xl border-t-[3px] border-t-orange-300 dark:bg-zinc-800">

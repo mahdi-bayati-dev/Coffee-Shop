@@ -1,3 +1,5 @@
+const { Container } = require("postcss");
+
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   darkMode: "class",
@@ -10,9 +12,15 @@ module.exports = {
           600: "#967259",
           900: "#634832",
         },
+        screens: {
+          sm: "640px",
+          md: "768px",
+          lg: "1024px",
+          xl: "1280px",
+        },
       },
       boxShadow: {
-        "normal": "0px 1px 10px 0px rgba(0, 0, 0, 0.05)",
+        normal: "0px 1px 10px 0px rgba(0, 0, 0, 0.05)",
       },
       borderRadius: {
         "4x1": "2rem",
@@ -28,9 +36,17 @@ module.exports = {
       letterSpacing: {
         tightest: "-.065em",
       },
+      Container:{
+        center:true,
+        padding:{
+          DEFAULT:"1rem",
+          lg:"0.625rem",
+        }
+      }
     },
   },
   plugins: [
+    require("tailwind-scrollbar-hide"), // افزودن پلاگین اسکرول
     function ({ addVariant }) {
       addVariant("child", "& > *");
       addVariant("child-hover", "& > *:hover");
