@@ -1,5 +1,3 @@
-const { Container } = require("postcss");
-
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   darkMode: "class",
@@ -11,12 +9,6 @@ module.exports = {
           300: "#DBC1AC",
           600: "#967259",
           900: "#634832",
-        },
-        screens: {
-          sm: "640px",
-          md: "768px",
-          lg: "1024px",
-          xl: "1280px",
         },
       },
       boxShadow: {
@@ -36,17 +28,23 @@ module.exports = {
       letterSpacing: {
         tightest: "-.065em",
       },
-      Container:{
-        center:true,
-        padding:{
-          DEFAULT:"1rem",
-          lg:"0.625rem",
-        }
-      }
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: "1rem",
+          lg: "0.625rem",
+        },
+      },
+      screen: {
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+      },
     },
   },
   plugins: [
-    require("tailwind-scrollbar-hide"), // افزودن پلاگین اسکرول
+    require("tailwind-scrollbar-hide"),
     function ({ addVariant }) {
       addVariant("child", "& > *");
       addVariant("child-hover", "& > *:hover");

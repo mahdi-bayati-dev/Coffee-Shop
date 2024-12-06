@@ -34,7 +34,7 @@ function MobileBasket() {
 
   return (
     <div
-      className="absolute top-0 left-0 h-full w-64 bg-white dark:bg-zinc-700 transition-all duration-500 overflow-scroll scrollbar-hide"
+      className="absolute top-0 left-0 h-full w-64 bg-white dark:bg-zinc-700 transition-all duration-500 overflow-scroll scrollbar-hide z-50"
       ref={menuBasketRef} // ارجاع DOM به متغیر
       style={{ maxHeight: "100vh", overflowY: "auto" }}
     >
