@@ -35,11 +35,16 @@ module.exports = {
           lg: "0.625rem",
         },
       },
-      screen: {
+      screens: {
+        xs:"480px",
         sm: "640px",
         md: "768px",
         lg: "1024px",
         xl: "1280px",
+      },
+      backgroundImage: {
+        desktop: "url('../public/img/header-bg/headerBgDesktop.png')",
+        mobile: "url('../public/img/header-bg/headerBgMobile.png')",
       },
     },
   },

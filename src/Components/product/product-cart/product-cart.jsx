@@ -12,6 +12,7 @@ function ProductCart({ product }) {
           src={product.image}
           alt={`تصویر ${product.title}`}
           className="w-32 md:w-auto mx-auto"
+          loading="lazy"
         />
       </div>
       {/* عنوان و قیمت محصول */}

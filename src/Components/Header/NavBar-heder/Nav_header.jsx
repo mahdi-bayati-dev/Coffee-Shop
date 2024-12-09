@@ -26,7 +26,7 @@ const NavBarHeader = () => {
   return (
     <>
       {/* نوار ناوبری در دسکتاپ */}
-      <nav className="hidden md:flex bg-black bg-opacity-50 backdrop-blur-[6px] w-[98%] lg:w-[90%] h-20 rounded-3xl mx-auto flex items-center justify-between py-5 px-4 lg:px-10 fixed top-6 right-0 left-0">
+      <nav className="hidden md:flex bg-black bg-opacity-50 backdrop-blur-[6px] w-[98%] lg:w-[90%] h-20 rounded-3xl mx-auto flex items-center justify-between py-5 px-4 lg:px-10 fixed top-6 right-0 left-0 z-50">
         {/* لوگو و منوی اصلی */}
         <div className="nav-right flex items-center gap-x-3 lg:gap-x-9">
           <img src="/img/app-logo.png" alt="لوگو" />
