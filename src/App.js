@@ -6,6 +6,7 @@ import ProductContainer from "./Components/product/product-container/product-con
 import CategoryBanner from "./Components/Categor-Banner/CategoryBanners";
 import { Categories } from "./data-CategoryBanner";
 import ProductsCategoryContainer from "./Components/ProductsCategory/ProductsCategoryContainer";
+import BestSeller from "./Components/bestSeller/bestSeller";
 
 function App() {
   return (
@@ -19,8 +20,8 @@ function App() {
           <CategoryBanner id={category.id} {...category} />
         ))}
       </div>
-      {/* استفاده از کامپوننت کتگوری در کانتینر */}
       <ProductsCategoryContainer />
+      <BestSeller/>
     </div>
   );
 }
