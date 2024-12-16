@@ -7,6 +7,7 @@ import CategoryBanner from "./Components/Categor-Banner/CategoryBanners";
 import { Categories } from "./data-CategoryBanner";
 import ProductsCategoryContainer from "./Components/ProductsCategory/ProductsCategoryContainer";
 import BestSeller from "./Components/bestSeller/bestSeller";
+import CoffeeClub from "./Components/CoffeeClub/CoffeeClub";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       </div>
       <ProductsCategoryContainer />
       <BestSeller/>
+      <CoffeeClub/>
     </div>
   );
 }

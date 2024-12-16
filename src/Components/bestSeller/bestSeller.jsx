@@ -48,13 +48,13 @@ function BestSeller() {
       </div>
       <div className=" mt-6">
         <Swiper
-          onSwiper={(swiper) => (swiperRef.current = swiper)} // ذخیره instance در ref
+          onSwiper={(swiper) => (swiperRef.current = swiper)} 
           spaceBetween={20}
           slidesPerView={4}
           breakpoints={{
-            0: { slidesPerView: 1, spaceBetween: 10 }, // فضای کمتر برای موبایل
-            640: { slidesPerView: 2, spaceBetween: 15 },
-            768: { slidesPerView: 3, spaceBetween: 20 },
+            0: { slidesPerView: 2, spaceBetween: 10 }, 
+            640: { slidesPerView: 3, spaceBetween: 15 },
+            768: { slidesPerView: 4, spaceBetween: 20 },
             1024: { slidesPerView: 4, spaceBetween: 30 },
           }}
           
