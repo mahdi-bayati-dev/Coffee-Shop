@@ -8,6 +8,7 @@ import { Categories } from "./data-CategoryBanner";
 import ProductsCategoryContainer from "./Components/ProductsCategory/ProductsCategoryContainer";
 import BestSeller from "./Components/bestSeller/bestSeller";
 import CoffeeClub from "./Components/CoffeeClub/CoffeeClub";
+import ArticleContainer from "./Components/Article/ArticleContainer/ArticleContainer";
 
 function App() {
   return (
@@ -24,6 +25,8 @@ function App() {
       <ProductsCategoryContainer />
       <BestSeller/>
       <CoffeeClub/>
+      <ArticleContainer/>
+
     </div>
   );
 }
