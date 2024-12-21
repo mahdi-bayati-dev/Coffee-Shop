@@ -1,35 +1,52 @@
 import React from "react";
 
-function ArticleBox() {
+function parseDate(dateString) {
+  const date = new Date(dateString);
+  const day = date.toLocaleDateString("fa-IR", { day: "numeric" });
+  const month = date.toLocaleDateString("fa-IR", { month: "long" });
+  const year = date.toLocaleDateString("fa-IR", { year: "numeric" });
+  return { day, month, year };
+}
+function ArticleBox({ title, img, time }) {
+  const { day, month, year } = parseDate(time);
+
   return (
-    <div className="bg-white rounded-2xl mt-12 w-[285px] h-[300px] relative overflow-hidden">
-      {/* تصویر */}
-      <div className="relative group">
+    <div className="bg-white dark:bg-zinc-700 rounded-xl shadow-lg overflow-hidden w-full max-w-[350px] sm:max-w-[300px] mx-auto flex flex-row sm:flex-col items-center">
+      <div className="w-[220px] sm:w-[275px] h-[130px] sm:h-[187px] p-2">
         <img
-          src="./CoffeeShop-Files/blogs/blog-1.png"
-          alt=""
-          className="p-2 rounded-bl-4x1 rounded-xl"
+          src={img}
+          alt="عکس مقاله"
+          className="w-full h-full object-cover rounded-bl-4x1 rounded-lg"
         />
-        {/* لایه رنگی */}
-        <div className="absolute inset-0 bg-orange-200 opacity-0 group-hover:opacity-50 transition-opacity duration-300 m-2 rounded-bl-4x1 "></div>
-        {/* متن در وسط */}
-        <span className="absolute inset-0 flex items-center justify-center text-white font-bold text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <img src="./img/svgs/app-logo-type.svg" alt=""  className=""/>
-        </span>
       </div>
+      <div className="flex flex-col sm:flex-row justify-between p-4 w-2/3 sm:w-full">
+        {/* عنوان */}
+        <a
+          href="/"
+          className="text-right text-gray-800 dark:text-white text-lg font-medium leading-tight"
+        >
+          {title}
+        </a>
 
-      {/* متن و تاریخ */}
-      <div className="flex p-2 justify-between items-center">
-        {/* متن */}
-        <p className="text-[18px] text-right w-48">
-          طرز تهیه قهوه دمی با دستگاه اروپرس
-        </p>
+        {/* خط جداکننده */}
+        <div className="w-full h-[1px] bg-gray-300 sm:w-[1px] sm:h-12 sm:mx-4 my-4 sm:my-0"></div>
 
-        {/* تاریخ */}
-        <div className="flex flex-col px-4 py-2 text-teal-600">
-          <span className="font-DemiBold text-2xl">21</span>
-          <span>مرداد</span>
-          <span>1402</span>
+        {/* تاریخ و دکمه در حالت موبایل */}
+        <div className="flex items-center justify-between sm:flex-col px-1 sm:px-2 sm:px-0 w-full sm:w-auto">
+          {/* تاریخ */}
+          <div className="flex flex-row sm:flex-col gap-x-[2px] justify-between text-teal-600">
+            <span className="text-xs  sm:text-2xl sm:font-DemiBold">{day}</span>
+            <span className="text-xs sm:text-sm">{month}</span>
+            <span className="text-xs sm:text-sm">{year}</span>
+          </div>
+
+          {/* دکمه مطالعه */}
+          <a
+            href="/"
+            className=" bg-orange-50 text-orange-500 rounded-lg px-4 py-1 text-sm hover:bg-orange-100 block sm:hidden"
+          >
+            مطالعه
+          </a>
         </div>
       </div>
     </div>
