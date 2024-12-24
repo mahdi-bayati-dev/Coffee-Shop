@@ -9,6 +9,7 @@ import ProductsCategoryContainer from "./Components/ProductsCategory/ProductsCat
 import BestSeller from "./Components/bestSeller/bestSeller";
 import CoffeeClub from "./Components/CoffeeClub/CoffeeClub";
 import ArticleContainer from "./Components/Article/ArticleContainer/ArticleContainer";
+import ContactUs from "./Components/ContactUs/ContactUs"
 
 function App() {
   return (
@@ -26,6 +27,8 @@ function App() {
       <BestSeller/>
       <CoffeeClub/>
       <ArticleContainer/>
+      <ContactUs/>
+
 
     </div>
   );
